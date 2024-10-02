@@ -1,0 +1,135 @@
+@import "../colors/mocha.css";
+
+/* margin: top right bottom left */
+/* Spacing outside the element */
+
+/* padding: top right bottom left */
+/* Spacing inside the element */
+
+* {
+  font-family: SFPro;
+  font-size: 15px;
+}
+
+window#waybar{
+  background-color: transparent;
+}
+
+.module{
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 2px solid #3b3e50;
+  color: #BD93F9;
+}
+
+#workspaces button {
+  color: @text;
+  background: @background3;
+  padding: 0px 10px 0px 10px;
+  margin: 7px 5px 10px 5px;
+  border: 1px solid @border;
+}
+
+#workspaces button:hover {
+  background: @surface0;
+  color: @text;
+}
+
+#workspaces button.active {
+  color: @crust;
+  background: @overlay2;
+  border: none; 
+}
+
+#custom-launcher,
+#clock,
+#battery,
+#cpu,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#memory,
+#custom-dunst,
+#custom-powermenu{
+	padding: 0px 20px;
+  color: @crust;
+}
+
+#window,
+
+#custom-launcher {
+  color: #BD93F9;
+  padding: 0px 20px 0px 20px;
+  background-color: #282A36;
+}
+
+#cpu {
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+#temperature{
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+#memory {
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+
+#custom-dunst {
+  color: #BD93F9;
+  padding: 0px 13px 0px 13px;
+  background-color: #282A36;
+}
+
+#pulseaudio {
+  color: #BD93F9;
+  padding: 0px 20px 0px 17px;
+  background-color: #282A36;
+}
+
+#network {
+  color: #BD93F9;
+  padding: 0px 15px 0px 20px;
+  background-color: #282A36;
+}
+
+#battery {
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+#clock {
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+#custom-powermenu {
+  padding: 0px 20px 0px 20px;
+  color: #BD93F9;
+  background-color: #282A36;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(30, 34, 42, 0.5);
+    color: #abb2bf;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
